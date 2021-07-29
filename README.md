@@ -31,7 +31,9 @@
 ```
 
 ### Dependencies
+```
 VueAxios [Configuration Reference](https://www.npmjs.com/package/vue-axios).
+```
 
 ### Improvements
 ```
