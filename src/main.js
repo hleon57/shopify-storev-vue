@@ -1,6 +1,16 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
-createApp(App).use(store).use(router).mount("#app");
+const app = createApp(App)
+  .use(VueAxios, axios)
+  .use(store)
+  .use(router)
+  .mount('#app');
+
+store.$http = app.$http;
+store.axios = app.axios;
+export default app;
